@@ -1,2 +1,10 @@
-# copilot_test.py
-A repository for an internship based on copilot and devOps
+# Copilot Uptime Script
+
+## What Copilot Suggested
+When I asked GitHub Copilot to create a script to print system uptime, it generated:
+
+```python
+import os
+uptime = os.popen("uptime -p").read()
+print(uptime)
+
