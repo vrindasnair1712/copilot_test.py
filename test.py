@@ -1,0 +1,14 @@
+import subprocess
+
+def get_system_uptime():
+    try:
+        # Run the uptime command securely
+        result = subprocess.run(["uptime", "-p"], capture_output=True, text=True, check=True)
+        print("System Uptime:", result.stdout.strip())
+    except subprocess.CalledProcessError as e:
+        print("Error retrieving uptime:", e)
+    except Exception as e:
+        print("Unexpected error:", e)
+
+if __name__ == "__main__":
+    get_system_uptime()
